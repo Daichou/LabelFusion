@@ -46,9 +46,9 @@ build_director()
 build_elasticfusion()
 {
   cd $root_dir
-  git clone https://github.com/peteflorence/ElasticFusion.git
+  git clone https://github.com/Daichou/ElasticFusion.git
   cd ElasticFusion
-  git checkout pf-lm-debug-jpeg
+  git checkout rs2_labelfusion
 
   git clone https://github.com/stevenlovegrove/Pangolin.git
   cd Pangolin
