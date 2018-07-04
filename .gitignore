@@ -2,3 +2,5 @@ data/
 *pyc
 automation/scp_config.yaml
 src/ply
+director/
+director-build/
