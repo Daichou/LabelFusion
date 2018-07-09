@@ -7,7 +7,7 @@ set -ex
 
 echo 'deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial main' | sudo tee /etc/apt/sources.list.d/realsense-public.list
 
-sudo apt-key adv --keyserver hkp://keys.gnupg.net:80 --recv-key 6F3EFCDE
+sudo apt-key adv --keyserver keys.gnupg.net --recv-key 6F3EFCDE
 
 apt-get update
 

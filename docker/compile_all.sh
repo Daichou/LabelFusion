@@ -34,7 +34,8 @@ build_director()
       -DUSE_APRILTAGS:BOOL=ON \
       -DUSE_KINECT:BOOL=ON \
       -DCMAKE_INSTALL_PREFIX:PATH=$install_dir \
-      -DCMAKE_BUILD_TYPE:STRING=Release
+      -DCMAKE_BUILD_TYPE:STRING=Release \
+      -DDD_QT_VERSION:STRING=5
 
   make -j$(nproc)
 
