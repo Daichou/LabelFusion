@@ -63,7 +63,7 @@ apt-get install -y \
   librealsense2-dev \
   librealsense2-dbg
 
-apt-get upgrade -y
+apt-get -y upgrade
 
   # optional cleanup to make the docker image smaller
   # rm -rf /var/lib/apt/lists/*
