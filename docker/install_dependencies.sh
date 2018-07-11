@@ -16,6 +16,7 @@ apt-get update
 #libvtk5-dev \
 #libvtk5-qt4-dev \
 #python-vtk \
+#libqwt-dev \
 
 apt-get install -y \
   bash-completion \
@@ -31,7 +32,7 @@ apt-get install -y \
   libopenni2-dev \
   libqhull-dev \
   qtbase5-gles-dev\
-  libqwt-dev \
+  libqwt-qt5-dev \
   libsuitesparse-dev \
   libudev-dev \
   libusb-1.0-0-dev \
@@ -40,6 +41,8 @@ apt-get install -y \
   tcl-vtk6 \
   libqt5webkit5 \
   libqt5webkit5-dev \
+  libqt5x11extras5-dev \
+  libqt5x11extras5 \
   libvtk6.2-qt \
   libvtk6-qt-dev \
   qtdeclarative5-dev \
@@ -60,6 +63,7 @@ apt-get install -y \
   librealsense2-dev \
   librealsense2-dbg
 
+apt-get upgrade
 
   # optional cleanup to make the docker image smaller
   # rm -rf /var/lib/apt/lists/*
