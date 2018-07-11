@@ -61,7 +61,8 @@ apt-get install -y \
   librealsense2-dkms \
   librealsense2-utils \
   librealsense2-dev \
-  librealsense2-dbg
+  librealsense2-dbg \
+  libqt5gui5
 
 apt-get -y upgrade
 
