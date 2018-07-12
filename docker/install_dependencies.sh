@@ -31,7 +31,6 @@ apt-get install -y \
   libopencv-dev \
   libopenni2-dev \
   libqhull-dev \
-  qtbase5-gles-dev\
   libqwt-qt5-dev \
   libsuitesparse-dev \
   libudev-dev \
@@ -62,7 +61,7 @@ apt-get install -y \
   librealsense2-utils \
   librealsense2-dev \
   librealsense2-dbg \
-  libqt5gui5
+  libqt5gui5 
 
 apt-get -y upgrade
 
