@@ -11,14 +11,8 @@ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 6F3EFCDE
 
 apt-get update
 
-# Removed packages
-#libqt4-dev \
-#libvtk5-dev \
-#libvtk5-qt4-dev \
-#python-vtk \
-#libqwt-dev \
-
 apt-get install -y \
+  lsb-core \
   bash-completion \
   build-essential \
   cmake \
@@ -38,6 +32,7 @@ apt-get install -y \
   libvtk6-dev \
   libvtk6-java \
   tcl-vtk6 \
+  libqt4-dev \
   libqt5webkit5 \
   libqt5webkit5-dev \
   libqt5x11extras5-dev \
@@ -62,6 +57,15 @@ apt-get install -y \
   librealsense2-dev \
   librealsense2-dbg \
   libqt5gui5 
+
+# Removed packages
+#apt-get install -y \
+#  libvtk5-dev \
+#  libvtk5-qt4-dev \
+#  python-vtk \
+#  libqwt-dev \
+
+
 
 apt-get -y upgrade
 

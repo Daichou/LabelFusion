@@ -15,7 +15,8 @@ build_director()
   cd director
   git remote add pf https://github.com/peteflorence/director.git
   git fetch pf
-  git checkout pf/corl-master
+  git checkout pf/master
+  #git checkout pf/corl-master
   cd ..
 
   mkdir director-build
@@ -30,7 +31,6 @@ build_director()
       -DUSE_SYSTEM_LCM:BOOL=OFF \
       -DUSE_SYSTEM_LIBBOT:BOOL=OFF \
       -DUSE_SYSTEM_VTK:BOOL=OFF \
-      -DUSE_PRECOMPILED_VTK:BOOL=OFF \
       -DUSE_PCL:BOOL=ON \
       -DUSE_APRILTAGS:BOOL=ON \
       -DUSE_KINECT:BOOL=ON \
