@@ -26,6 +26,8 @@ if [ ! -z "$1" ]; then
   data_mount_arg="-v $data_dir:/root/labelfusion/data"
 fi
 
-xhost +local:root;
+#xhost +local:root;
+
 nvidia-docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v $source_dir:/root/labelfusion $data_mount_arg --privileged -v /dev/bus/usb:/dev/bus/usb $image_name
-xhost -local:root;
+
+#xhost -local:root;
