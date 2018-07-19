@@ -10,10 +10,12 @@
 # also mounted as a volume.
 #
 
-image_name=robotlocomotion/labelfusion:latest
+#image_name=robotlocomotion/labelfusion:latest
+image_name=ianre657/labelfusion:latest
 
 
 source_dir=$(cd $(dirname $0)/.. && pwd)
+default_data_dir=/opt/sampleData/LabelFusion/LabelFusion_Sample_Data/
 
 if [ ! -z "$1" ]; then
 
@@ -22,8 +24,12 @@ if [ ! -z "$1" ]; then
     echo "directory does not exist: $data_dir"
     exit 1
   fi
-
   data_mount_arg="-v $data_dir:/root/labelfusion/data"
+
+elif [ ! -z $default_data_dir ] && [ -d $default_data_dir ]; then
+  data_dir=$default_data_dir
+  data_mount_arg="-v $data_dir:/root/labelfusion/data"
+
 fi
 
 #xhost +local:root;
