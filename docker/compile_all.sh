@@ -11,12 +11,12 @@ install_dir=$root_dir/install
 build_director()
 {
   cd $root_dir
-  git clone https://github.com/RobotLocomotion/director.git
+  #git clone https://github.com/RobotLocomotion/director.git
+  git clone -b master https://github.com/ianre657/director.git
   cd director
-  git remote add pf https://github.com/peteflorence/director.git
-  git fetch pf
-  git checkout pf/master
-  #git checkout pf/corl-master
+  ##git remote add pf https://github.com/peteflorence/director.git
+  ##git fetch pf
+  ##git checkout pf/master
   cd ..
 
   mkdir director-build
