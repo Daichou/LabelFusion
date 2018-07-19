@@ -8,6 +8,19 @@ set -exu
 root_dir=$(pwd)
 install_dir=$root_dir/install
 
+build_lcm(){
+    cd $root_dir
+    git clone https://github.com/lcm-proj/lcm.git
+    cd lcm
+    mkdir build && cd build
+    cmake ..
+    make -j$(nproc)
+    make install
+    cd ../../
+    rm -rf lcm
+}
+
+
 build_director()
 {
   cd $root_dir
@@ -89,3 +102,4 @@ build_elasticfusion()
 
 build_director
 build_elasticfusion
+build_lcm
