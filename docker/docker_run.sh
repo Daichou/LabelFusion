@@ -10,8 +10,7 @@
 # also mounted as a volume.
 #
 
-#image_name=robotlocomotion/labelfusion:latest
-image_name=ianre657/labelfusion:latest
+image_name=tommyccgattaca/labelfusion:latest
 
 
 source_dir=$(cd $(dirname $0)/.. && pwd)
@@ -32,6 +31,6 @@ elif [ ! -z $default_data_dir ] && [ -d $default_data_dir ]; then
 
 fi
 
-#xhost +local:root;
+xhost +local:root;
 nvidia-docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v $source_dir:/root/labelfusion $data_mount_arg --privileged -v /dev/bus/usb:/dev/bus/usb $image_name
-#xhost -local:root;
+xhost -local:root;
